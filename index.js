@@ -4,6 +4,10 @@ module.exports = function(fullStr) {
   var strings = fullStr.split(' ');
   var plurals = [];
   for (var i in strings) {
+    // avoid cases where Array.prototype has been tampered with
+    if (!strings.hasOwnProperty(i)) {
+      continue;
+    }
     var str = strings[i];
     // http://grammaire.reverso.net/5_5_01_pluriel_des_noms_et_des_adjectifs.shtml
     // If pluriel is not initialized
