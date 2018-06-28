@@ -1,4 +1,4 @@
-# Pluralize-es
+# Pluralize-fr
 
 > Finds the plural form of most french words.  Many exceptions are covered.
 
